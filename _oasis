@@ -1,0 +1,16 @@
+OASISFormat: 0.3
+Name:        github-mirror
+Version:     0.1
+Synopsis:    Github mirror tool
+Authors:     Jon Ludlam
+License:     ISC
+Plugins:     META (0.3)
+BuildTools: ocamlbuild
+
+Executable repo_info
+  Path:               src
+  MainIs:             mirror_tool.ml
+  CompiledObject:     best
+  Install:            true
+  BuildDepends:       cohttp.lwt, lwt.syntax, github, atdgen, cmdliner
+
